@@ -27,9 +27,10 @@ button {
 }
 
 .location .city {
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 400;
     margin-bottom: 5px;
+    display: none;
 }
 
 .location .date {
@@ -39,7 +40,7 @@ button {
 }
 
 .current .temp {
-    font-size: 90px;
+    font-size: 80px;
     font-weight: 700;
     color: white;
     text-shadow: 2px 5px #322a3b;
@@ -49,12 +50,27 @@ button {
     font-weight: 400;
 }
 
-.current .weather {
-    font-size: 32px;
-}
-
 .current .hi-low {
     font-size: 24px;
+}
+
+.weather-icon {
+    opacity: 0.7;
+}
+
+.weather-div {
+    display: flex;
+    align-items: center;
+}
+
+.current .weather {
+    font-size: 22px;
+    font-style: italic;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 576px) { 
@@ -89,10 +105,22 @@ button {
     }
     
     .current .weather {
-        font-size: 32px;
+        font-size: 22px;
     }
     
     .current .hi-low {
         font-size: 24px;
- }
+    }
+
+    .weather-div {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .weather-icon img {
+        width: 100px;
+    }
+
+
 }

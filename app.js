@@ -3,8 +3,17 @@ const api = {
     baseurl: 'https://api.openweathermap.org/data/2.5/'
 }
 
+let city_div = document.querySelector('.city');
+let gif_div = document.querySelector('.rainbow-gif');
+let chooseText_div = document.querySelector('.choose-text');
+let weatherIcon_div = document.querySelector('.weather-icon');
+let time_p = document.querySelector('.time');
+
 $('.dropdown-item').click(function() {
     let city = ( $(this).text() );
+    city_div.style.display = 'block';
+    gif_div.style.display = 'none';
+    chooseText_div.style.display = 'none';
     console.log(city);
     getResult(city);
 })
@@ -17,12 +26,29 @@ function getResult(query){
 }
 
 function displayResults(weather) {
-    console.log(weather);
+    console.log(weather)
     let city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
+
     let now = new Date();
     let date = document.querySelector('.location .date');
-    date.innerText = dateBuilder(now)
+    date.innerText = dateBuilder(now);
+
+    let temp = document.querySelector('.current .temp');
+    temp.innerHTML = `${Math.round(weather.main.temp)}<span>°f</span>`;
+
+    let weather_el = document.querySelector('.current .weather');
+    weather_el.innerText = weather.weather[0].main;
+
+    weatherIcon_div.innerHTML = `<img src="icons/${weather.weather[0].icon}.png">`
+    
+    let hilow = document.querySelector('.hi-low');
+    hilow.innerText = `${Math.floor(weather.main.temp_min)}°f / ${Math.floor(weather.main.temp_max)}°f`;
+
+    const sunrise = new Date((weather.dt + weather.timezone) * 1000);
+    const hours = sunrise.getHours();
+    const minutes = sunrise.getMinutes()
+    time_p.innerText = `Local time: ${hours}:${minutes}`
 }
 
 function dateBuilder(d){

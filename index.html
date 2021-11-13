@@ -16,23 +16,37 @@
         </header>
         <main>
             <section class="location">
-                <div class="city">Walt Disney World, FL</div>
-                <div class="date">Sunday 15 November, 2021</div>
+                <div class="city"></div>
+                <div class="date"></div>
+                <div class="time"></div>
             </section>
             <div class="current">
-                <div class="temp m-2 m-sm-4">15<span>°c</span></div>
-                <div class="weather m-sm-2">Sunny</div>
-                <div class="hi-low m-2">12°c / 32°c</div>
+                <div class="weather-div m-sm-5">
+                    <div class="icon-text mr-3">
+                        <div class="weather-icon"></div>
+                        <div class="weather"></div>
+                    </div>
+                    <div class="temp-text m-2">
+                        <div class="temp"><span></span></div>
+                        <div class="hi-low"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rainbow-gif">
+                <img src="/assets/rainbow.gif" alt="">
+            </div>
+            <div class="choose-text">
+                <p>Select a resort below:</p>
             </div>
             <div class="dropdown" id="city-list">
                 <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Resort
+                    <i class="fas fa-hand-sparkles"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">Florida</a>
                   <a class="dropdown-item" href="#">California</a>
                   <a class="dropdown-item" href="#">Paris</a>
-                  <a class="dropdown-item" href="#">China</a>
+                  <a class="dropdown-item" href="#">Shanghai</a>
                   <a class="dropdown-item" href="#">Hong Kong</a>
                   <a class="dropdown-item" href="#">Tokyo</a>
                 </div>
