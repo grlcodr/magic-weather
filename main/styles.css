@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Comfortaa', cursive;
-    background: url(assets/desktop-bg.png);
+    background: url(/assets/desktop-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -73,9 +73,15 @@ button {
     flex-direction: column;
 }
 
+.fa-fort-awesome {
+    color: #6f42c1;
+    opacity: 0.7;
+    font-size: 30px;
+}
+
 @media (max-width: 576px) { 
     body {
-        background: url(assets/phone-bg.png);
+        background: url(/assets/phone-bg.png);
         background-size: cover;
         background-repeat: no-repeat;
     }

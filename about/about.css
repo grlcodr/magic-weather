@@ -8,12 +8,12 @@
 
 body {
     font-family: 'Comfortaa', cursive;
-    background: url(assets/desktop-bg.png);
+    background: url(/assets/desktop-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.welcome-wrap {
+.about-wrap {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -22,10 +22,38 @@ body {
     text-align: center;
 }
 
+.about-wrap a {
+    color: #6f42c1;
+}
+
+.about-wrap a:hover {
+    text-decoration: none;
+    color: #824ae9;
+}
+
+.fa-fort-awesome {
+    color: #6f42c1;
+    opacity: 0.7;
+    font-size: 30px;
+}
+
 @media (max-width: 576px) { 
     body {
-        background: url(assets/phone-bg.png);
+        background: url(/assets/phone-bg.png);
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    .about-wrap {
+        padding: 50px;
+        opacity: 0.9;
+    }
+
+    .about-wrap h3 {
+        font-size: 20px;
+    }
+
+    .about-wrap p {
+        font-size: 15px;
     }
 }
