@@ -37,6 +37,10 @@ body {
     font-size: 30px;
 }
 
+.fa-fort-awesome:hover{
+    cursor: pointer;
+}
+
 @media (max-width: 576px) { 
     body {
         background: url(/assets/phone-bg.png);
