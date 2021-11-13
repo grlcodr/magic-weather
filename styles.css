@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background: url(assets/desktop-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    width: 200px;
+}
+
+.location .city {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.location .date {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.current .temp {
+    font-size: 90px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 5px #322a3b;
+}
+
+.current .temp span {
+    font-weight: 400;
+}
+
+.current .weather {
+    font-size: 32px;
+}
+
+.current .hi-low {
+    font-size: 24px;
+}
+
+@media (max-width: 576px) { 
+    body {
+        background: url(assets/phone-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .location .city {
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    
+    .location .date {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    
+    .current .temp {
+        font-size: 70px;
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 5px #322a3b;
+        
+    }
+    
+    .current .temp span {
+        font-weight: 400;
+    }
+    
+    .current .weather {
+        font-size: 32px;
+    }
+    
+    .current .hi-low {
+        font-size: 24px;
+ }
+}

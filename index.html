@@ -6,11 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/371a64259b.js" crossorigin="anonymous"></script>
-    <title>Disney Weather App</title>
+    <title>Magic Weather</title>
 </head>
 <body>
-    
+    <div class="app-wrap">
+        <header>
+        </header>
+        <main>
+            <section class="location">
+                <div class="city">Walt Disney World, FL</div>
+                <div class="date">Sunday 15 November, 2021</div>
+            </section>
+            <div class="current">
+                <div class="temp m-2 m-sm-4">15<span>°c</span></div>
+                <div class="weather m-sm-2">Sunny</div>
+                <div class="hi-low m-2">12°c / 32°c</div>
+            </div>
+            <div class="dropdown" id="city-list">
+                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Resort
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Florida</a>
+                  <a class="dropdown-item" href="#">California</a>
+                  <a class="dropdown-item" href="#">Paris</a>
+                  <a class="dropdown-item" href="#">China</a>
+                  <a class="dropdown-item" href="#">Hong Kong</a>
+                  <a class="dropdown-item" href="#">Tokyo</a>
+                </div>
+              </div>
+        </main>
+    </div>
 <script src="app.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
